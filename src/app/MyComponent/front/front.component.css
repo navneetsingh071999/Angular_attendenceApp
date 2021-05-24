@@ -1,0 +1,31 @@
+.gap{
+    width: auto;
+    height: 120px;
+}
+.gapm{
+    width: auto;
+    height: 180px;
+}
+.headtext{
+    font-family: Brush Script Std;
+    text-decoration: underline;
+}
+.enjoy{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btxn{
+    width: 100pt;
+    height: 33pt;
+    font-size: 18px;
+    text-align: start;
+    border-radius: 0px;
+}
+.fill{
+    height: 100%;
+}
+
+.back{
+    background-image: url("../../../assets/maain-back2.jpg");
+    background-size: cover;
+
+}

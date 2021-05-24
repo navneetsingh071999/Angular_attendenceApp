@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="container text-center my-3">
+        <h3 class="mx-auto">Student's Attendence Checker</h3>
+    </div>
+    <div class="container text-right my-3">
+        <app-add-details (addStud) = "addStudents($event)"></app-add-details>
+    </div>
+    <div class="container">
+        <h4>Total number of Students: {{info.length}}</h4>
+        <h5>Total Present: {{totalpresent()}}{{res}}</h5>
+        <h5>Total Absent: {{totalpresent()}}{{abs}}</h5>
+    </div>
+    <div class="container">
+
+        <div *ngIf="this.info.length === 0; else elseBlock">
+            No Records Found
+        </div>
+        <ng-template #elseBlock>
+            <div  clas="float-left" *ngFor="let i of info">
+                <app-list-details [i]="i" (delStud)="deleteStudent($event)" (tglAtten) = "tglStudAtn($event)"></app-list-details>
+            </div>
+        </ng-template>
+    </div>
+</div>

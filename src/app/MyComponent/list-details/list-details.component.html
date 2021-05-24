@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div *ngIf="i.present is 'true'; else elseBlock">
+    <div class="card float-start me-3 my-1" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text">{{i.stream}}</p>
+        <button class="btn btn-danger" (click) = "delete(i)">Delete</button>
+        <button class="btn btn-warning" (click) = "attendence(i)">Absent</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="card float-start me-3 my-1 bg-warning" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text">{{i.stream}}</p>
+        <button class="btn btn-danger" (click) = "delete(i)">Delete</button>
+        <button class="btn btn-success" (click) = "attendence(i)">Present</button>
+      </div>
+    </div>
+  </ng-template>
+  
+</div>
